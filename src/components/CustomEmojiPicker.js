@@ -31,7 +31,15 @@ class CustomEmojiPicker extends React.Component {
 		return this.state.hidePicker ? (
 			<CustomButton toggleHidePicker={this.toggleHidePicker} />
 		) : (
-			<Picker data={data} onEmojiSelect={this.addEmoji} perLine={7} onClickOutside={this.toggleHidePicker} />
+			<Picker
+				data={data}
+				onEmojiSelect={this.addEmoji}
+				perLine={6}
+				onClickOutside={this.toggleHidePicker}
+				maxFrequentRows={2}
+				previewPosition={'none'}
+				searchPosition={'none'}
+			/>
 		);
 	}
 }
