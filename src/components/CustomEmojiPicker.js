@@ -15,9 +15,7 @@ class CustomEmojiPicker extends React.Component {
 		const emoji = e.native;
 		console.log('Adding emoji:', emoji);
 		const { channel, channelSid, useLocalState, useSeparateInputStore } = this.props;
-		console.log(channel, channelSid, useLocalState, useSeparateInputStore);
 		const inputText = channel && channel.inputText;
-		console.log(inputText);
 		const payload = {
 			body: `${inputText}${emoji}`,
 			channel,
